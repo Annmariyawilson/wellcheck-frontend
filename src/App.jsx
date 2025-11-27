@@ -27,7 +27,7 @@ function App() {
       <Route path="/teacher/MoodGraph" element={<MoodGraph />} />
       <Route path="/teacher/Studentlist" element={<Studentlist />} />
       {/* Student Routes */}
-      <Route path="/student/checkin" element={<StudentCheckin />} />
+      <Route path="/student/student-checkin" element={<StudentCheckin />} />
       <Route path="/student/history" element={<StudentHistory />} />
 
       <Route
