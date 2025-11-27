@@ -19,18 +19,18 @@ import stressed from "../assets/images/emojis/stressed.png";
 import worried from "../assets/images/emojis/worried.png";
 
 const moodMap = {
-  0: { text: "Angry", icon: angry },
-  1: { text: "Calm", icon: calm },
-  2: { text: "Ecstatic", icon: ecstatic },
-  3: { text: "Good", icon: good },
-  4: { text: "Grumpy", icon: grampy },
-  5: { text: "Happy", icon: happy },
-  6: { text: "Inspired", icon: inspired },
-  7: { text: "Lethargic", icon: lethargic },
-  8: { text: "Numb", icon: numb },
-  9: { text: "Sad", icon: sad },
+  0: { text: "Ecstatic", icon: ecstatic },
+  1: { text: "Happy", icon: happy },
+  2: { text: "Good", icon: good },
+  3: { text: "Inspired", icon: inspired },
+  4: { text: "Calm", icon: calm },
+  5: { text: "Numb", icon: numb },
+  6: { text: "Worried", icon: worried },
+  7: { text: "Sad", icon: sad },
+  8: { text: "Lethargic", icon: lethargic },
+  9: { text: "Grumpy", icon: grampy },
   10: { text: "Stressed", icon: stressed },
-  11: { text: "Worried", icon: worried }
+  11: { text: "Angry", icon: angry }
 };
 
 export default function StudentsResult() {

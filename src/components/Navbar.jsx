@@ -29,8 +29,8 @@ function Navbar() {
 
   return (
     <div
-      className="text-white p-6 rounded-xl"
-      style={{ backgroundColor: "#5B4F9B" }}
+      className="p-6 rounded-xl"
+      style={{ backgroundColor: "#A0E7E5",color:"#03045E" }}
     >
       <h1 className="text-3xl font-bold">
         Welcome back, {teacherName}

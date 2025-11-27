@@ -20,19 +20,20 @@ import worried from "../assets/images/emojis/worried.png";
 
 // Order must match backend mood values (0-11)
 const moodList = [
-  { label: "Angry", img: angry },
-  { label: "Calm", img: calm },
   { label: "Ecstatic", img: ecstatic },
-  { label: "Good", img: good },
-  { label: "Grumpy", img: grampy },
   { label: "Happy", img: happy },
+  { label: "Good", img: good },
   { label: "Inspired", img: inspired },
-  { label: "Lethargic", img: lethargic },
+  { label: "Calm", img: calm },
   { label: "Numb", img: numb },
+  { label: "Worried", img: worried },
   { label: "Sad", img: sad },
+  { label: "Lethargic", img: lethargic },
+  { label: "Grumpy", img: grampy },
   { label: "Stressed", img: stressed },
-  { label: "Worried", img: worried }
+  { label: "Angry", img: angry }
 ];
+
 
 export default function TeacherDashboard() {
   const [activity, setActivity] = useState(null);
@@ -73,7 +74,7 @@ export default function TeacherDashboard() {
 
   // Students sad or stressed
   const sadOrStressed =
-    (activity.groups[9]?.length || 0) + (activity.groups[10]?.length || 0);
+    (activity.groups[7]?.length || 0) + (activity.groups[10]?.length || 0);
 
   return (
     <div className="flex bg-gray-100 min-h-screen">

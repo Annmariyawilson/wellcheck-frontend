@@ -19,18 +19,18 @@ import stressed from "../assets/images/emojis/stressed.png";
 import worried from "../assets/images/emojis/worried.png";
 
 const moodMap = {
-  0: { text: "Angry", icon: angry },
-  1: { text: "Calm", icon: calm },
-  2: { text: "Ecstatic", icon: ecstatic },
-  3: { text: "Good", icon: good },
-  4: { text: "Grumpy", icon: grampy },
-  5: { text: "Happy", icon: happy },
-  6: { text: "Inspired", icon: inspired },
-  7: { text: "Lethargic", icon: lethargic },
-  8: { text: "Numb", icon: numb },
-  9: { text: "Sad", icon: sad },
+  0: { text: "Ecstatic", icon: ecstatic },
+  1: { text: "Happy", icon: happy },
+  2: { text: "Good", icon: good },
+  3: { text: "Inspired", icon: inspired },
+  4: { text: "Calm", icon: calm },
+  5: { text: "Numb", icon: numb },
+  6: { text: "Worried", icon: worried },
+  7: { text: "Sad", icon: sad },
+  8: { text: "Lethargic", icon: lethargic },
+  9: { text: "Grumpy", icon: grampy },
   10: { text: "Stressed", icon: stressed },
-  11: { text: "Worried", icon: worried }
+  11: { text: "Angry", icon: angry }
 };
 
 export default function StudentHistory() {
@@ -68,7 +68,22 @@ export default function StudentHistory() {
       
 
       <div className="flex-1 md:ml-0 ml-0 p-4 md:p-6 mb-16 sm:mb-0">
-        <StudentNavbar />
+        {/*  Custom Navbar Added Here */}
+    <div className="bg-[#A0E7E5] p-3 rounded-xl shadow-sm border-b border-gray-100">
+      <div className="max-w-7xl ms-7">
+        <div className="flex items-center h-16">
+
+          {/* Left = Logo + App Name */}
+          <div className="flex items-center space-x-2">
+           
+            <span className="text-2xl font-bold text-[#03045E]">
+              History
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
         <div className="py-6 lg:mb-0 md:mb-0 mb-20">
           <h2 className="text-xl md:text-2xl font-bold mb-6">

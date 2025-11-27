@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-[#5B4F9B] p-3 rounded-xl  shadow-sm border-b border-gray-100">
+      <nav className="bg-[#A0E7E5] p-3 rounded-xl  shadow-sm border-b border-gray-100">
         <div className="max-w-7xl ms-7">
           <div className="flex items-center h-16">
 
@@ -19,7 +19,7 @@ export default function Navbar() {
             <div className="w-10 h-10 bg-white bg-opacity-20 rounded-md flex items-center justify-center">
             <Check color="#FFD85A" strokeWidth={6}/>
           </div>
-              <span className="text-2xl font-bold text-[#FAFAFA]">WellCheck</span>
+              <span className="text-2xl font-bold text-[#03045E]">WellCheck</span>
             </div>
           </div>
         </div>
