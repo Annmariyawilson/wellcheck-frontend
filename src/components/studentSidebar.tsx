@@ -15,7 +15,7 @@ function StudentSidebar() {
   };
 
   const links = [
-    { to: "/student/checkin", icon: <House className="w-6 h-6" />, label: "Dashboard" },
+    { to: "/student/student-checkin", icon: <House className="w-6 h-6" />, label: "Dashboard" },
     { to: "/student/history", icon: <History className="w-6 h-6" />, label: "History" },
   ];
 
