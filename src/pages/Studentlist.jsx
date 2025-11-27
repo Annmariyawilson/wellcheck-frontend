@@ -54,7 +54,7 @@ const handleResetPassword = async () => {
   setResetting(true);
   try {
     const res = await axios.post(
-      "http://localhost:3000/api/teacher/reset-student-password",
+      "https://wellcheck-backend.onrender.com/api/teacher/reset-student-password",
       {
         student_id: selectedStudent.id,
         newPassword: passwords.newPassword,
