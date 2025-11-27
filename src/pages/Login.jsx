@@ -34,7 +34,7 @@ function Login() {
         navigate("/teacher-dashboard");
       } else {
         localStorage.setItem("student_id", res.data.data.id);
-        navigate("/student/checkin");
+navigate("/student/student-checkin");
       }
     } catch (err) {
       alert(err?.response?.data?.message || "Login failed");
