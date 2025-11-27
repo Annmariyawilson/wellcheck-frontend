@@ -42,45 +42,54 @@ function Signup() {
     fetchClasses();
   }, []);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    try {
-      let url = "";
-      let payload = {};
+  try {
+    let url = "";
+    let payload = {};
 
-      if (userType === "Student") {
-        url = "https://wellcheck-backend.onrender.com/api/student-signup";
-        payload = {
-          username: form.username,
-          password: form.password,
-          class_id: form.class_id,
-          phone: form.phone,
-          dob: form.dob,
-        };
-      } else {
-        url = "https://wellcheck-backend.onrender.com/api/teacher/signup";
-        payload = {
-          username: form.username,
-          password: form.password,
-          class_id: form.class_id, 
-          phone: form.phone,
-          dob: form.dob,
-        };
-      }
-
-      const res = await axios.post(url, payload);
-
-      alert(`${userType} Account Created Successfully!`);
-      navigate("/");
-    } catch (err) {
-      console.error(err);
-      alert(err.response?.data?.message || "Signup failed");
+    if (userType === "Student") {
+      url = "https://wellcheck-backend.onrender.com/api/student-signup";
+      payload = {
+        username: form.username,
+        password: form.password,
+        class_id: form.class_id,
+        phone: form.phone,
+        dob: form.dob,
+      };
+    } else {
+      url = "https://wellcheck-backend.onrender.com/api/teacher/signup";
+      payload = {
+        username: form.username,
+        password: form.password,
+        class_id: form.class_id, 
+        phone: form.phone,
+        dob: form.dob,
+      };
     }
 
+    const res = await axios.post(url, payload);
+
+    alert(`${userType} Account Created Successfully!`);
+    navigate("/");
+
+  } catch (err) {
+    console.error(err);
+
+    const message = err.response?.data?.message || "";
+    if (message.includes("duplicate key value")) {
+      alert(
+        "This phone number is already registered."
+      );
+    } else {
+      alert(message || "Signup failed. Please try again.");
+    }
+  } finally {
     setLoading(false);
-  };
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#F5F5F5] p-4">
